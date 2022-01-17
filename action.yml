@@ -1,4 +1,4 @@
-name: "Auto Withdraw Bot"
+name: "Simply Add PR Label"
 description: "A bot that looks at the last time EIPs were edited and marks them as withdrawn if they haven't been edited in a certain amount of time"
 inputs:
   githubToken:
