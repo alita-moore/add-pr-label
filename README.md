@@ -9,7 +9,7 @@ jobs:
   add_label:
     runs-on: ubuntu-latest
     steps:
-    - name: Enable Automerge V2
+    - name: Add Label
       uses: "alita-moore/add-pr-label"
       env:
           githubToken: "${{ secrets.GITHUB_TOKEN }}"
