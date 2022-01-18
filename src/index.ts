@@ -16,7 +16,7 @@ export const LABEL_TO_ADD = process.env.LABEL_TO_ADD
 
 const setLabels = async (labels: string[]): Promise<void> => {
   console.log(GITHUB_TOKEN, GITHUB_TOKEN.length)
-  console.log(LABEL_TO_ADD)
+  console.log(LABEL_TO_ADD, LABEL_TO_ADD.length)
   const Github = getOctokit(GITHUB_TOKEN).rest;
   await Github.issues.setLabels({
     owner: context.repo.owner,
