@@ -1,11 +1,11 @@
 name: "Simply Add PR Label"
 description: "A bot that looks at the last time EIPs were edited and marks them as withdrawn if they haven't been edited in a certain amount of time"
 inputs:
-  GITHUB-TOKEN:
+  GITHUB_TOKEN:
     description: |-
       The Github token to be used by this bot when creating branches, committing updated files, and open PRs
     required: true
-  LABEL-TO-ADD:
+  LABEL_TO_ADD:
     description: |-
       this label is added to the PR
     required: true
@@ -14,5 +14,5 @@ runs:
   using: "composite"
   steps:
     - run: |-
-        cd ${{github.action_path}} && yarn install && yarn build && GITHUB_TOKEN=${{ inputs.GITHUB-TOKEN }} LABEL_TO_ADD=${{ inputs.LABEL-TO-ADD }} node build/src/index.js
+        cd ${{github.action_path}} && yarn install && yarn build && GITHUB_TOKEN=${{ inputs.GITHUB_TOKEN }} LABEL_TO_ADD=${{ inputs.LABEL_TO_ADD }} node build/src/index.js
       shell: bash
