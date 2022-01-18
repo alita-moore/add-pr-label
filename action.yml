@@ -13,6 +13,5 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: |-
-        cd ${{github.action_path}} && yarn install && yarn build && GITHUB_TOKEN=${{ inputs.GITHUB_TOKEN }} LABEL_TO_ADD=${{ inputs.LABEL_TO_ADD }} node build/src/index.js
+    - run: cd ${{github.action_path}} && yarn install && yarn build && GITHUB_TOKEN=${{ inputs.GITHUB_TOKEN }} LABEL_TO_ADD=${{ inputs.LABEL_TO_ADD }} node build/src/index.js
       shell: bash
