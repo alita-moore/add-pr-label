@@ -14,8 +14,5 @@ runs:
   using: "composite"
   steps:
     - run: |-
-        cd ${{github.action_path}} && yarn install && yarn build\
-        && sh -c "sudo chmod -R 777 ./build"\
-        && GITHUB_TOKEN=${{ inputs.GITHUB-TOKEN }} LABEL_TO_ADD=${{ inputs.labelToAdd }}\
-        node build/src/index.js
+        cd ${{github.action_path}} && yarn install && yarn build && sh -c "sudo chmod -R 777 ./build" && GITHUB_TOKEN=${{ inputs.GITHUB-TOKEN }} LABEL_TO_ADD=${{ inputs.labelToAdd }} node build/src/index.js
       shell: bash
