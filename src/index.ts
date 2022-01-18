@@ -20,8 +20,6 @@ const setLabels = async (labels: string[]): Promise<void> => {
     owner: context.repo.owner,
     repo: context.repo.repo,
     issue_number: context.issue.number,
-    // @ts-expect-error the expected type is (string[] & {name: string}[]) | undefined
-    // but string[] and {name: string}[] cannot simultaneously coincide
     labels
   }).then(res => res)
 }
